@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+	<link rel="canonical" href="{{ .Site.BaseURL }}">
+	<link rel='stylesheet' href='/style.css'>
+	<link rel='stylesheet' href='/colors.css'>
+	<link rel='stylesheet' href='/backgrounds.css'>
+	<link rel="icon" href="/favicon.png">
+	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+	{{ end -}}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	<meta name="HandheldFriendly" content="True">
+
+	<meta property="og:title" content="{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ .Site.BaseURL }}">
+	<meta property="og:image" content="/ogimage.png">
+	<meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+	<meta property="og:site_name" content="{{ .Site.BaseURL }}">
+
+</head>
+<body>
+<div id="preprebox">
+<div id="prebox">
+{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
+
+<header>
+
+<div id="banner"><a href="/">Hunicke.com</a></div>
+
+<nav>
+<a href="/about">About</a><span style="display: none;"> &ndash;</span>
+<a href="/articles">Writings</a><span style="display: none;"> &ndash;</span>
+<br class="wow"><a href="/academic">Academic</a><span style="display: none;"> &ndash;</span>
+<a href="/links">Links</a><span style="display: none;"> &ndash;</span>
+<a href="/contact">Contact</a>
+</nav>
+<hr style="display: none;">
+
+</header>
+
+<div id="box">
+
+<!--<div style="width: 100%; text-align: right; float: left; margin-top: -10px;">More stuff: <a href="/infrastructure">infrastructure</a> • <a href="/radio">radio</a>
+</div>-->
+
+{{ partial "sitemap.html" }}
+
+{{ range site.Menus.main }}
+  <a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+
+
+<main>
+ <h1 id="{{ lower (replace .Title " " "-") }}">{{ block "title" . }}{{ end }}</h1>
+
+
+
+
+<article>
+{{ block "main" . }}
+{{ .Content }}
+{{ end }}
+<!-- {{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
+{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}} -->
+</article>
+</main>
+
+
+{{ block "footer" . }}
+</div>
+<footer>
+<hr style="display: none;">
+	<!-- <a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a> -->
+	{{- if .Param "showrss" }}<br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
+
+
+<p>(c) 2025 Hezekiah Hunicke • Verse of the Month is Psalms 127:1</p>
+
+</footer>
+
+
+
+{{ end }}
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{{ $section := .Section }}
+{{ $current := .CurrentPage }}
+
+<li>
+  {{/* Highlight current section */}}
+  {{ if eq $section.RelPermalink $current.RelPermalink }}
+    <strong><a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a></strong>
+  {{ else }}
+    <a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a>
+  {{ end }}
+
+  {{/* If section has pages or subsections, nest them */}}
+  {{ $children := union $section.Pages $section.Sections }}
+  {{ if gt (len $children) 0 }}
+    <ul>
+      {{ range $children }}
+        {{ if .IsSection }}
+          {{ partial "sitemap-section.html" (dict "Section" . "CurrentPage" $current) }}
+        {{ else }}
+          <li>
+            {{ if eq .RelPermalink $current.RelPermalink }}
+              <strong><a href="{{ .RelPermalink }}">{{ .Title }}</a></strong>
+            {{ else }}
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ end }}
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  {{ end }}
+</li>

@@ -1,0 +1,53 @@
+<ul>
+  {{ range .Site.Menus.main.ByName }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+  {{ end }}
+</ul>
+
+<!--
+<div id="sitemap">
+	<div style="width 100%; text-align: center; margin-top: 5px;">
+		<b>Navigation</b>
+	</div>
+		
+			{{ if eq .RelPermalink "/" }}
+				<strong><a href="/">home</a></strong>
+			{{ else }}
+				<a href="/">home</a>
+			{{ end }}
+				<ul style="margin-top: 0px;">
+					<li>{{ if eq .RelPermalink "/about/" }}
+						<strong><a href="/about">about</a></strong>
+					{{ else }}
+						<a href="/about">about</a>
+					{{ end }}</li>
+					<li>
+						<div>
+							<a href="/articles">articles</a>
+								<ul>
+									<details>
+										<summary>. . .</summary>
+											<li>foo</li>
+								</ul>
+									</details>
+						</div>
+					</li>
+
+			<li><a href="/academic">academic</a></li>
+			<li><a href="/links">links</a></li>
+			<li><a href="/contact">contact</a></li>
+			<li><a href="/infrastructure">infrastructure</a></li>
+			<li><a href="/radio">radio</a>
+				<ul>
+					<li><a href="/qsl">QSL Cards</a></li>
+				</ul>
+			</li>
+			<li><a href="/index.xml">index.xml</a></li>
+		</ul>
+</div> -->
+
+<ul>
+  {{ range .Site.Menus.main.ByWeight }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+  {{ end }}
+</ul>

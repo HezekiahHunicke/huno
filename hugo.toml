@@ -1,0 +1,10 @@
+baseURL = 'https://hunicke.com'
+languageCode = 'en-us'
+title = "Hezekiah's Web Site"
+
+theme = 'lugo'
+
+[markup.goldmark.renderer]
+  unsafe = 'true' # Allow HTML in md files
+
+sectionPagesMenu = "main"

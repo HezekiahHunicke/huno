@@ -1,0 +1,293 @@
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+ul {
+	list-style-type: "── ";
+	border-style: none none none solid;
+	border-width:;
+	padding-left: 25px;
+	margin-left: 12px;
+	list-style-position: outside;
+
+}
+
+li {
+	padding-left:;
+}
+
+
+
+/* Huno */
+
+	/* General */
+
+html, body {
+	overflow-wrap: break-word;
+	margin: 0;
+}
+
+body {
+	margin: auto;
+	background-color: #2c3320;
+	color: var(--fg);
+	font-family: "georgia", times, serif;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: var(--green);
+}
+
+h2 {
+	color: var(--yellow);
+}
+
+h3 {
+	color: var(--orange);
+}
+
+a {
+	color: #048;
+}
+
+a:link {
+	
+}
+
+a:visited {
+
+}
+
+a:hover {
+	
+}
+
+.listlink a {
+	
+}
+
+.picframe {
+	border: solid 10px var(--bg4);
+}
+
+	/* layout */
+
+header {
+	margin-top: 70px;
+}
+
+#banner {
+	color: var(--bg3);
+	font-family: J24banner, "geOrgia", monospace, sans-serif;
+	margin: 0px;
+	line-height: 1;
+	display: inline-block;
+}
+
+#banner a {
+	color: var(--bg3);
+	text-decoration: none;
+}
+
+
+#banner {
+	font-size: 40pt;
+}
+
+nav {
+	
+	display: flow-root;
+	text-align: right;
+	font-size: x-large;
+	float: right;
+	margin-top: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--bg3);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#preprebox {
+	max-width: 1030px;
+	margin: auto;
+}
+
+#prebox {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#box {
+	padding: 20px 20px 20px 20px;
+	border: solid 5px var(--fg4);
+	background-color: var(--bg_h);
+	display: flow-root;
+}
+
+#sitemap {
+	float: right;
+	background-color: #eeb;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border: solid var(--fg4)
+}
+
+#sitemap ul {
+	border-color: var(--fg4);
+}
+
+#sitemap a {
+	
+}
+
+footer {
+	padding-bottom: 20px;
+	text-align: center;
+	color: var(--bg3);
+}
+
+	/* steve jobs is laughing at us from sheol */
+
+@media screen and (max-width: 890px) {
+
+	nav {
+		margin-top: 0px;
+		float: none;
+		text-align: center;
+		padding-bottom: 5px;
+	}
+
+	#banner {
+		
+	}
+	header {
+		margin-top: 0px;
+		text-align: center;
+	}
+	footer {
+		padding-bottom: 0.25px;
+	}
+}
+
+/* Spent two hours here trying to write a 
+logarithmic/exponential function for vw before
+realizing it literally just isn't possible in
+CSS. Then I realized vw - px does the same
+thing. THEN I decided I didn't even want to do
+that. */
+
+
+@media (width > 650px) {
+
+	.wow {
+		display: none;
+	}
+}
+
+@media (width < 450px) {
+
+	.wow {
+		display: none;
+	}
+}
+
+
+
+@media screen and (max-width: 650px) {
+
+	#box {
+		padding: 0 20px 0px 20px;
+	}
+
+
+	nav {
+		background-color: var(--bg_h);
+		border: solid 5px var(--fg4);
+		color: black;
+		/* font-size: calc(4.2vw - 1.3px); */
+		margin-bottom: 10px;
+	}
+
+	nav a {
+		color: #048;
+		text-decoration: underline;
+		/* margin-left: calc(1vw - 1px);
+		margin-right: calc(1vw - 1px); */
+	}
+
+	.wow br {
+		display: inline;
+	}
+
+	footer {
+		background-color: var(--bg_h);
+		border: solid 5px var(--fg4);
+		color: var(--fg);
+		margin-top: 10px;
+		margin-bottom: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#banner {
+		background-color: var(--bg_h);
+		border: solid 5px var(--fg4);
+		margin-bottom: 10px;
+		margin-top: 15px;
+		display: block;
+		color: var(--fg);
+	}
+	#banner a {
+		color: var(--fg3);
+	}
+
+	/* adds more 10px to margin bottom
+	if the last element in article is
+	a list */
+
+	ul:last-child {
+		margin-bottom: 26px;
+	}
+
+	ol:last-child {
+		margin-bottom: 26px;
+	}
+
+	.sixfif {
+		display: none;
+	}
+
+}
+
+
+
+	/* attic
+
+.tagline {
+	text-align: center;
+	font-family: geOrgia, times, serif;
+	font-style: italic;
+	margin: 0;
+} */
+
+
+
+
+
+
+	/* Loads banner font ITS ONLY 3.4 KB OKAY */
+@font-face {
+	font-family: J24banner;
+	src: url(/Jacquard_24/J24bannersubset.woff2);
+}

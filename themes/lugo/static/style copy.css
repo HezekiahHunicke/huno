@@ -1,0 +1,387 @@
+
+	/* Huno */
+
+html, body {
+	overflow-wrap: break-word;
+	margin: 0;
+	height: 100%;
+}
+
+
+body {
+	max-width: 900px;
+	margin: auto;
+}
+
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+
+#header {
+	color: var(--fg4);
+	font-family: J24, "geOrgia", monospace, sans-serif;
+	margin: 0px;
+	text-align: center;
+	line-height: 1;
+}
+
+#header a {
+	color: var(--fg4);
+	font-family: J24, "geOrgia", monospace, sans-serif;
+	margin: 0px;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+@media (min-width: 650px) {
+	#header {
+		font-size: 50pt;
+	
+	}
+}
+
+@media (max-width: 649px) {
+	#header {
+		font-size: 20vw;
+	}
+}
+
+
+/* Loads web fonts */
+/*
+@font-face {
+	font-family: IMFell;
+	src: url(IMFellEnglish-Regular.ttf);
+} */
+
+@font-face {
+	font-family: J24;
+	src: url(J24.ttf);
+}
+
+
+body {
+	background-color: var(--bg_h);
+	color: var(--fg1);
+	font-family: geOrgia, times, serif;
+/*	background-image: url(rock.jpg);
+	background-size: 50% */
+}
+
+
+nav {
+	
+	width: 100%;
+	text-align: center;
+	line-height: 0.5;
+	font-size: x-large;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--fg3);
+}
+
+
+/* Styling for Headings */
+
+h1 {
+	color: #8FAB74;
+}
+
+h2 {
+	color: #BAB66D;
+}
+
+h3 {
+	color: #C88659;
+}
+
+
+
+/* subtitle */
+
+.tagline {
+	text-align: center;
+	font-family: geOrgia, times, serif;
+	font-style: italic;
+	margin: 0;
+}
+
+/* Link Styling. My links show an outline on hover.
+They do not change color if visited */
+
+a {
+	color: var(--blue);
+}
+
+a:link {
+	
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+
+a:hover {
+	background-color: blue;
+}
+
+
+
+	/* My custom styling for lists of links
+	::marker is to make bullets the color I want
+	Margins of ul are set to zero because default is excessive IMO 
+
+.listlink {
+	text-decoration: none;
+	::marker {
+		color: var(--fg);
+	}
+}
+
+.listlink i {
+	color: var(--fg3);
+}
+
+.listlink img {
+	max-height: 1em;
+	max-width: 1em;
+}
+
+.listlink ul {
+	margin: 0px 0px 0px 0px;
+}
+
+.listlink li {
+	font-family: geOrgia;
+}
+
+*/
+
+
+
+
+pre {
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+
+/*
+table {
+	width: 49%;
+	max-width: 400px;
+}
+
+table, th, td {
+	border: 1px solid;
+	border-collapse: collapse;
+
+}
+
+
+
+td {
+	padding: 5px;
+	
+}
+
+*/
+
+
+
+
+	/* lugo */
+
+footer {
+	text-align: center ;
+	color: var(--fg4);
+	clear: both ;
+}
+
+/* For TAGLIST.HTML */
+.taglist {
+	text-align: center ;
+	clear: both ;
+}
+
+/* For NEXTPREV.HTML */
+#nextprev {
+	/* The container for both the previous and next articles. */
+}
+#prevart {
+	float: left ;
+	text-align: left ;
+}
+#nextart {
+	float: right ;
+	text-align: right ;
+}
+#nextart,#prevart {
+	max-width: 33% ;
+}
+
+
+
+	/* Colors */
+
+:root {
+  --bg_h: #1d2021;
+  --bg:   #282828;
+  --bg_s: #32302f;
+  --bg1:  #3c3836;
+  --bg2:  #504945;
+  --bg3:  #665c54;
+  --bg4:  #7c6f64;
+
+  --fg:  #fbf1c7;
+  --fg1: #ebdbb2;
+  --fg2: #d5c4a1;
+  --fg3: #bdae93;
+  --fg4: #a89984;
+
+  --red:    #fb4934;
+  --green:  #b8bb26;
+  --yellow: #fabd2f;
+  --blue:   #83a598;
+  --purple: #d3869b;
+  --aqua:   #8ec07c;
+  --gray:   #928374;
+  --orange: #fe8019;
+
+  --red-dim:    #cc2412;
+  --green-dim:  #98971a;
+  --yellow-dim: #d79921;
+  --blue-dim:   #458588;
+  --purple-dim: #b16286;
+  --aqua-dim:   #689d6a;
+  --gray-dim:   #a89984;
+  --orange-dim: #d65d0e;
+}
+
+/* Normal Colors */
+
+.red {
+  color: var(--red);
+}
+
+.green {
+  color: var(--green);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.aqua {
+  color: var(--aqua);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+/* Dim Colors */
+
+.red-dim {
+  color: var(--red-dim);
+}
+
+.green-dim {
+  color: var(--green-dim);
+}
+
+.yellow-dim {
+  color: var(--yellow-dim);
+}
+
+.blue-dim {
+  color: var(--blue-dim);
+}
+
+.purple-dim {
+  color: var(--purple-dim);
+}
+
+.aqua-dim {
+  color: var(--aqua-dim);
+}
+
+.gray-dim {
+  color: var(--gray-dim);
+}
+
+.orange-dim {
+  color: var(--orange-dim);
+}
+
+/* Foreground Colors */
+
+.fg {
+  color: var(--fg);
+}
+
+.fg1 {
+  color: var(--fg1);
+}
+
+.fg2 {
+  color: var(--fg2);
+}
+
+.fg3 {
+  color: var(--fg3);
+}
+
+.fg4 {
+  color: var(--fg4);
+}
+
+/* Background Colors */
+
+.bg-hard {
+  color: var(--bg_h);
+}
+
+.bg {
+  color: var(--bg);
+}
+
+.bg-soft {
+  color: var(--bg_s);
+}
+
+.bg1 {
+  color: var(--bg1);
+}
+
+.bg2 {
+  color: var(--bg2);
+}
+
+.bg3 {
+  color: var(--bg3);
+}
+
+.bg4 {
+  color: var(--bg4);
+}
+
